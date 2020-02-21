@@ -1,4 +1,5 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable no-console */
 /* eslint-disable react/no-unused-state */
 /* eslint-disable react/prop-types */
 /* eslint-disable import/extensions */
@@ -16,27 +17,26 @@ class SaveShare extends React.Component {
   }
 
   saveFavorite({ id, name }) {
-    // eslint-disable-next-line no-console
     console.log(`Saved ${name}, with id of ${id}, or would if we had back-end save functionality.`);
     this.setState({ saved: true });
   }
 
-  render({
-    name, saved, share, shareClose, url,
-  }) {
+  render(
+    // {name, saved, share, shareClose, url, }
+  ) {
     return (
       <div>
         <div className="tom-grid-100-saveshare">
           <div className="tom-grid-50-left">
-            <SaveOnly saved={saved} saveFavorite={this.saveFavorite} />
+            {/* <SaveOnly saved={saved} saveFavorite={this.saveFavorite} /> */}
           </div>
           <div className="tom-grid-50-right">
-            <ShareOnly
+            {/* <ShareOnly
               url={url}
               name={name}
               share={share}
               shareClose={shareClose}
-            />
+            /> */}
           </div>
         </div>
       </div>

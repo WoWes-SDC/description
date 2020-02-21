@@ -1,4 +1,7 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable no-console */  
+/* eslint-disable linebreak-style */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 // import axios from 'axios';
@@ -56,14 +59,17 @@ class ShoppingCart extends React.Component {
     }
   }
 
-  render({ quantity }) {
+  // I had to comment out { quantity } as a parameter/prop, so I could render the component
+  render(
+    // { quantity } --> value={quantity} --> added to input after className
+  ) {
     return (
       <div>
         <div className="tom-grid-100 tom-cart-group">
           <div className="tom-cart-buttons">
             <div className="tom-cart-button-group">
               <button type="button" className="tom-cart-adjuster" onClick={this.decreaseQuantity}><i>-</i></button>
-              <input id="tom-cart-value" className="tom-cart-quantity" value={quantity} onChange={this.handleChange} />
+              <input id="tom-cart-value" className="tom-cart-quantity" onChange={this.handleChange} /> 
               <button type="button" className="tom-cart-adjuster" onClick={this.increaseQuantity}><i>+</i></button>
             </div>
           </div>
