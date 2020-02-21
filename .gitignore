@@ -1,5 +1,4 @@
 node_modules
 dump.sql
 package-lock.json
-client/dist/bundle.js
 database/pwd.js
