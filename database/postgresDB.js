@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const pgp = require('pg-promise')(/* options */);
 
-const db = pgp('postgres://username:password@host:port/database');
+const db = pgp('postgres://postgres:password@localhost:5432/database');
 
 db.one('SELECT $1 AS value', 123)
   .then((data) => {
