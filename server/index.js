@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const db = require('../database/db.js');
+// const db = require('../database/db.js');
+const db = require('../database/postgresDB.js');
 const cors = require('cors');
 const PORT = 3002;
 
